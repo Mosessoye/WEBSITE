@@ -333,3 +333,124 @@ function addPost() {
   // Clear the textarea after posting
   document.getElementById("post-content").value = "";
 }
+// Sample interactive content data
+const interactiveContent = [
+  { 
+      title: "Quiz",
+      description: "Test your knowledge with this interactive quiz.",
+      action: "startQuiz()"
+  },
+  { 
+      title: "Interactive Presentation",
+      description: "Explore key concepts with this interactive presentation.",
+      action: "startPresentation()"
+  },
+  // Add more interactive content items as needed
+];
+
+// Function to generate interactive content items
+function generateInteractiveItems() {
+  const interactiveContentDiv = document.getElementById("interactive-content");
+  
+  interactiveContent.forEach(item => {
+      const itemDiv = document.createElement("div");
+      itemDiv.classList.add("interactive-item");
+      itemDiv.innerHTML = `
+          <h3>${item.title}</h3>
+          <p>${item.description}</p>
+          <button onclick="${item.action}">Start</button>
+      `;
+      interactiveContentDiv.appendChild(itemDiv);
+  });
+}
+
+// Function to start quiz
+function startQuiz() {
+  // Implement quiz functionality
+  alert("Starting quiz...");
+}
+
+// Function to start interactive presentation
+function startPresentation() {
+  // Implement interactive presentation functionality
+  alert("Starting interactive presentation...");
+}
+
+// Generate interactive content items when the page loads
+generateInteractiveItems();
+
+let progress = 0;
+
+// Function to update progress bar and text
+function updateProgress() {
+    const progressBar = document.getElementById("progress-bar");
+    const progressText = document.getElementById("progress-text");
+    
+    progressBar.style.width = progress + "%";
+    progressText.textContent = progress + "%";
+}
+
+// Function to increment progress
+function incrementProgress() {
+    if (progress < 100) {
+        progress += 10;
+        updateProgress();
+    } else {
+        alert("Congratulations! You've completed 100% of the progress.");
+    }
+}
+
+// Initial update of progress
+updateProgress();
+// Function to generate a certificate
+function generateCertificate() {
+  const certificateContainer = document.getElementById("certificate-container");
+  
+  // Clear existing certificate if any
+  certificateContainer.innerHTML = "";
+  
+  // Generate certificate content
+  const certificateContent = `
+      <div class="certificate">
+          <h3>Certificate of Completion</h3>
+          <p>This certifies that</p>
+          <h2>John Doe</h2>
+          <p>has successfully completed the course</p>
+          <h2>Web Development Fundamentals</h2>
+          <p>Date of Completion: April 19, 2024</p>
+      </div>
+  `;
+  
+  // Append certificate content to the container
+  certificateContainer.innerHTML = certificateContent;
+}
+const data = [
+  "Introduction to Programming",
+  "Web Development Fundamentals",
+  "Data Science Essentials",
+  "Machine Learning Basics",
+  "Artificial Intelligence Concepts"
+];
+
+// Function to perform search
+function search() {
+  const searchInput = document.getElementById("search-input").value.toLowerCase();
+  const searchResults = document.getElementById("search-results");
+
+  // Clear previous search results
+  searchResults.innerHTML = "";
+
+  // Filter data based on search input
+  const filteredData = data.filter(item => item.toLowerCase().includes(searchInput));
+
+  // Display search results
+  filteredData.forEach(item => {
+      const listItem = document.createElement("li");
+      listItem.textContent = item;
+      searchResults.appendChild(listItem);
+  });
+}
+
+// Perform search when input changes
+document.getElementById("search-input").addEventListener("input", search);
+

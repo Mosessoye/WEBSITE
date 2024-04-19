@@ -7,11 +7,18 @@
     <title>User Registration/Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  
     <header>
       <img src="image/edc1111.jfif" alt="Education Website Logo">
         <h1>Education Website</h1>
         <nav>
+          <div class="container">
+            <h2>Search Functionality</h2>
+            <input type="text" id="search-input" placeholder="Search...">
+            <ul id="search-results"></ul>
+        </div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#courses">Courses</a></li>
@@ -42,7 +49,7 @@
         <h2>Welcome to our Education Website</h2>
         <p>Get ready to embark on a journey of learning!</p>
     </section>
-    
+
     <div class="container">
       <h2>Discussion Forum</h2>
       <div id="post-form">
@@ -57,7 +64,20 @@
           <!-- Course cards will be dynamically added here -->
       </div>
   </section>
-
+  <div class="container">
+    <h2>Interactive Learning Materials</h2>
+    <div id="interactive-content">
+        <!-- Interactive content will be dynamically added here -->
+    </div>
+</div>
+<div class="container">
+  <h2>Progress Tracking</h2>
+  <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+      <span id="progress-text">0%</span>
+  </div>
+  <button onclick="incrementProgress()">Increment Progress</button>
+</div>
     
     <section id="about">
         <h2>About Us</h2>
