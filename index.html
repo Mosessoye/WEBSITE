@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Website</title>
+    <title>User Registration/Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+      <img src="image/edc1111.jfif" alt="Education Website Logo">
+        <h1>Education Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+      <h2>User Registration/Login</h2>
+      <div id="registration-form">
+          <h3>Register</h3>
+          <input type="text" id="register-username" placeholder="Username">
+          <input type="password" id="register-password" placeholder="Password">
+          <button onclick="register()">Register</button>
+      </div>
+      <div id="login-form">
+          <h3>Login</h3>
+          <input type="text" id="login-username" placeholder="Username">
+          <input type="password" id="login-password" placeholder="Password">
+          <button onclick="login()">Login</button>
+      </div>
+      <div id="message"></div>
+  </div>
+ 
 
+    <section id="home">
+        <h2>Welcome to our Education Website</h2>
+        <p>Get ready to embark on a journey of learning!</p>
+    </section>
+    
+    <div class="container">
+      <h2>Discussion Forum</h2>
+      <div id="post-form">
+          <textarea id="post-content" placeholder="Write your post here..."></textarea>
+          <button onclick="addPost()">Post</button>
+      </div>
+      <div id="post-list"></div>
+  </div>
+    <section id="courses">
+      <h2>Our Courses</h2>
+      <div id="course-list">
+          <!-- Course cards will be dynamically added here -->
+      </div>
+  </section>
+
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are dedicated to providing quality education to all.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have any questions? Feel free to reach out to us!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Education Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
