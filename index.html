@@ -3,94 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education Website</title>
-    <title>User Registration/Login</title>
+    <title>TechSolutions Inc.</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
-  
-    <header>
-      <img src="image/edc1111.jfif" alt="Education Website Logo">
-        <h1>Education Website</h1>
-        <nav>
-          <div class="container">
-            <h2>Search Functionality</h2>
-            <input type="text" id="search-input" placeholder="Search...">
-            <ul id="search-results"></ul>
-        </div>
+<body> 
+    <div class="top-menu">
+        <div class="container">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Blog</a></li>
             </ul>
-        </nav>
-    </header>
-    <div class="container">
-      <h2>User Registration/Login</h2>
-      <div id="registration-form">
-          <h3>Register</h3>
-          <input type="text" id="register-username" placeholder="Username">
-          <input type="password" id="register-password" placeholder="Password">
-          <button onclick="register()">Register</button>
-      </div>
-      <div id="login-form">
-          <h3>Login</h3>
-          <input type="text" id="login-username" placeholder="Username">
-          <input type="password" id="login-password" placeholder="Password">
-          <button onclick="login()">Login</button>
-      </div>
-      <div id="message"></div>
-  </div>
- 
-
-    <section id="home">
-        <h2>Welcome to our Education Website</h2>
-        <p>Get ready to embark on a journey of learning!</p>
-    </section>
-
-    <div class="container">
-      <h2>Discussion Forum</h2>
-      <div id="post-form">
-          <textarea id="post-content" placeholder="Write your post here..."></textarea>
-          <button onclick="addPost()">Post</button>
-      </div>
-      <div id="post-list"></div>
-  </div>
-    <section id="courses">
-      <h2>Our Courses</h2>
-      <div id="course-list">
-          <!-- Course cards will be dynamically added here -->
-      </div>
-  </section>
-  <div class="container">
-    <h2>Interactive Learning Materials</h2>
-    <div id="interactive-content">
-        <!-- Interactive content will be dynamically added here -->
+        </div>
     </div>
-</div>
-<div class="container">
-  <h2>Progress Tracking</h2>
-  <div id="progress-bar-container">
-      <div id="progress-bar"></div>
-      <span id="progress-text">0%</span>
-  </div>
-  <button onclick="incrementProgress()">Increment Progress</button>
-</div>
     
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are dedicated to providing quality education to all.</p>
+    <div class="container">
+        <img src="image/company.jfif" alt="TechSolutions Inc. Logo" class="logo"> <!-- Added logo image -->
+        </div>
+    <header>
+        <div class="container">
+            <h1>TechSolutions Inc.</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+  
+           
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have any questions? Feel free to reach out to us!</p>
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to TechSolutions Inc.</h2>
+            <p>Your one-stop solution for all your technology needs.</p>
+            <a href="#services" class="btn">Explore Our Services</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service">
+                <h3>Web Development</h3>
+                <p>We offer custom web development services tailored to your business needs.</p>
+            </div>
+            <div class="service">
+                <h3>Mobile App Development</h3>
+                <p>Get your own mobile app developed by our expert team.</p>
+            </div>
+            <div class="service">
+                <h3>IT Consulting</h3>
+                <p>Consult with our experienced professionals to optimize your IT infrastructure.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>TechSolutions Inc. is a leading technology company providing innovative solutions to businesses worldwide.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us to discuss your project requirements.</p>
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Testimonials</h2>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"TechSolutions Inc. helped us build an amazing website that perfectly fits our needs. The team was professional, responsive, and delivered exceptional results. Highly recommended!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="image/imag 2.jpg" alt="Customer Photo">
+                    <h3>Moses soye</h3>
+                    <p>CEO, TechSolutions</p>
+                </div>
+            </div>
+            <!-- Add more testimonial cards as needed -->
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Education Website</p>
+        <div class="container">
+            <p>&copy; 2024 TechSolutions Inc. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Techsolutions" target="_blank"><img src="image/face.jfif" alt="Facebook"></a>
+                <a href="https://twitter.com/Techsolutions" target="_blank"><img src="image/twitter.jfif" alt="Twitter"></a>
+                <a href="https://www.linkedin.com/company/Techsolutions" target="_blank"><img src="image/lik.jfif" alt="LinkedIn"></a>
+                <!-- Add more social media icons as needed -->
+            </div>
+            <div class="follow-buttons">
+                <a href="https://www.facebook.com/YourCompany" class="fb-follow-button" data-size="large" data-show-faces="false" data-width=""><img src="follow-facebook.png" alt="Follow on Facebook"></a>
+                <a href="https://twitter.com/YourCompany" class="twitter-follow-button" data-size="large" data-show-count="false"><img src="follow-twitter.png" alt="Follow on Twitter"></a>
+                <a href="https://www.linkedin.com/company/yourcompany" class="linkedin-follow-button" data-size="large" data-show-count="false"><img src="follow-linkedin.png" alt="Follow on LinkedIn"></a>
+                <!-- Add more follow buttons as needed -->
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
